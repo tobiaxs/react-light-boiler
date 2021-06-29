@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+    react:
+        container_name: react-light-boiler
+        build:
+            context: .
+        volumes:
+            - ".:/app"
+            - "/app/node_modules"
+        ports:
+            - 3000:3000
+        stdin_open: true
