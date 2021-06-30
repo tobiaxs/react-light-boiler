@@ -5,7 +5,7 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"test": "react-scripts test --watchAll --coverage",
+		"test": "react-scripts test --watchAll=false --coverage",
 		"lint:fix": "eslint . --ext .jsx,.js,.ts,.tsx --quiet --fix",
 		"lint:format": "prettier --loglevel warn --write .",
 		"lint": "yarn lint:format && yarn lint:fix "
