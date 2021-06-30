@@ -4,17 +4,20 @@
 	"private": true,
 	"scripts": {
 		"start": "react-scripts start",
-		"lint:fix": "eslint . --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
+		"test": "react-scripts test",
+		"lint:fix": "eslint . --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path .gitignore",
 		"lint:format": "prettier  --loglevel warn --write .",
 		"lint": "yarn lint:format && yarn lint:fix "
 	},
 	"lint-staged": {
-		"*.+(ts|tsx|js|jsx)": [
+		"*.+(ts|tsx|js)": [
 			"eslint --fix",
-			"prettier --write --ignore-unknown"
+			"prettier --write --ignore-unknown",
+			"git add"
 		],
-		"*.+(ts|tsx|js|jsx|json|less)": [
-			"prettier --write"
+		"*.+(ts|tsx|js|json|less)": [
+			"prettier --write",
+			"git add"
 		]
 	},
 	"browserslist": {
@@ -35,6 +38,9 @@
 		"react-scripts": "4.0.3"
 	},
 	"devDependencies": {
+		"@testing-library/jest-dom": "^5.14.1",
+		"@testing-library/react": "^12.0.0",
+		"@testing-library/user-event": "^13.1.9",
 		"@types/jest": "^26.0.15",
 		"@types/node": "^12.0.0",
 		"@types/react": "^17.0.0",

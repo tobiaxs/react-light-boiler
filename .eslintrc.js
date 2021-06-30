@@ -20,6 +20,7 @@ module.exports = {
 	},
 	extends: [
 		"eslint:recommended",
+		"react-app/jest",
 		"plugin:react/recommended",
 		"plugin:jsx-a11y/recommended",
 		"plugin:prettier/recommended",
